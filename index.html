@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Kvízová Hra</title>
+    <title>Kvízová Hra EUBA</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -460,6 +460,7 @@
             modal.dataset.value = value;
             modal.dataset.category = category;
             modal.dataset.elementId = element.dataset.category + "-" + element.dataset.value;
+            modal.dataset.double = "false"; // Resetujeme double pri každej novej otázke
 
             document.getElementById("modalCategory").textContent = category;
             document.getElementById("modalValue").textContent = `${value} bodov`;
@@ -697,4 +698,4 @@
         window.onload = initGame;
     </script>
 </body>
-</html> 
+</html>
